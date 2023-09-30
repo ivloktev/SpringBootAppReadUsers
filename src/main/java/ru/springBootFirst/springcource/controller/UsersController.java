@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 public class UsersController {
     private final UserService userService;
-    @GetMapping("/read")
+    @GetMapping("/users")
     public ResponseEntity<List<Users>> readAll(){
         return new ResponseEntity<>(userService.readAll(), HttpStatus.OK);
     }
