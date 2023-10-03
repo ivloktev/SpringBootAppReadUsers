@@ -13,9 +13,12 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 public class Users {
+
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
 
     @Column(name = "first_name")
     private String name;
@@ -25,5 +28,8 @@ public class Users {
 
     @Column(name = "age")
     private Byte age;
+
+    @Column(name = "password")
+    private String password;
 
 }
